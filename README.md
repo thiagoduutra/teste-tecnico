@@ -9,9 +9,9 @@ O objetivo do front e permitir:
 
 - cadastro e listagem de pessoas
 - cadastro e listagem de categorias
-- cadastro e listagem de transacoes
-- consulta de totais por pessoa
-- consulta de totais por categoria
+- cadastro e listagem de transações
+- consulta de totais por pessoas
+- consulta de totais por categorias
 
 ## Estrutura do projeto
 
