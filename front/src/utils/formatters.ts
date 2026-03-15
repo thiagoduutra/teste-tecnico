@@ -52,6 +52,15 @@ export function normalizeApiError(error: unknown) {
     if (
       typeof data === "object" &&
       data !== null &&
+      "mensagem" in data &&
+      typeof data.mensagem === "string"
+    ) {
+      return data.mensagem;
+    }
+
+    if (
+      typeof data === "object" &&
+      data !== null &&
       "title" in data &&
       typeof data.title === "string"
     ) {

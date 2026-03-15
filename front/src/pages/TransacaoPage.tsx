@@ -313,7 +313,7 @@ export function TransacaoPage() {
             {selectedPessoa && selectedPessoa.idade < 18 && (
               <FeedbackMessage
                 kind="info"
-                message="Pessoa menor de idade: apenas despesas estao disponiveis."
+                message="Pessoa menor de idade: apenas despesas estão disponíveis."
               />
             )}
 
