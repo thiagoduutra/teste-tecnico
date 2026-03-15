@@ -1,76 +1,86 @@
 # Controle de Gastos Residenciais
 
-Aplicacao React com TypeScript responsÁvel pela interface do sistema de controle de gastos residenciais.
+Aplicação composta por uma **Web API em .NET 10** (backend) e um **frontend React + TypeScript** (frontend) para controle de despesas e receitas.
 
-## Visao geral
+---
 
-Este projeto contÉm a camada web do sistema e consome uma Web API em .NET.
-O objetivo do front e permitir:
+## 🚀 Iniciando (do zero)
 
-- cadastro e listagem de pessoas
-- cadastro e listagem de categorias
-- cadastro e listagem de transações
-- consulta de totais por pessoas
-- consulta de totais por categorias
+### 1) Clonar o repositório
 
-## Estrutura do projeto
+```bash
+git clone https://github.com/thiagoduutra/teste-tecnico.git
+cd teste_tecnico
+```
 
-O codigo foi separado para facilitar manutencao e leitura:
+### 2) Rodar a Web API (.NET)
 
-- `src/pages`: telas principais
-- `src/components`: componentes visuais reutilizaveis
-- `src/services`: chamadas para a API
-- `src/types`: contratos tipados do front
-- `src/hooks`: logica reutilizavel de estado e carregamento
-- `src/utils`: formatacao e tratamento auxiliar
+A API usa SQLite e cria automaticamente o arquivo `controle_gastos.db` na primeira execução.
 
-## Tecnologias utilizadas
+```bash
+cd WebAPIGastos/WebAPIGastos
+dotnet run --launch-profile https
+```
 
-- React
-- TypeScript
-- Vite
-- Bootstrap
-- Axios
+> 🔎 A API ficará disponível em `https://localhost:7214` (ou porta similar).
 
-## Pre-requisitos
+### 3) Rodar o frontend (React + Vite)
 
-Antes de executar o projeto, voce precisa ter:
+```bash
+cd ../../../front
+npm i
+npm run dev
+```
 
-- Node.js 20+ instalado
-- npm instalado
-- Web API do projeto rodando localmente
+> 🔎 O frontend normalmente fica em `http://localhost:5173` e faz chamadas para a API.
 
-## Instalacao
+---
 
-Dentro da pasta `front`, execute:
+## 🧭 Estrutura do repositório
 
-- npm i 
-- npm run dev
+- `front/` – frontend React + TypeScript
+- `WebAPIGastos/` – backend ASP.NET Core Web API (SQLite)
 
-## Tecnologias utilizadas
-# Front-end
-- React
-- TypeScript
-- Vite
-- Bootstrap
-- Axios
+---
 
-# Back-end
-- .NET 10
-- ASP.NET CORE Web API
-- Dapper
-- SQLite
-- Scalar
+## 🪓 Regras de negócio (backend)
 
-## Regras de negócio
-
-# Ao criar uma transação, a API válida:
+Ao criar uma transação, a API valida:
 
 - A descrição é obrigatória
 - O valor deve ser maior que zero
 - A pessoa informada deve existir
 - A categoria informada deve existir
-- Menores de idade só podem possuir transações do tipo despesa
-- Categoria de receita não pode ser usada em transação de despesa
-- Categoria de despesa não pode ser usada em transação de receita
-- Categoria com finalidade Ambas pode ser usada nos dois tipos
+- Menores de idade só podem possuir transações do tipo **despesa**
+- Categoria de receita não pode ser usada em transação de **despesa**
+- Categoria de despesa não pode ser usada em transação de **receita**
+- Categoria com finalidade **Ambas** pode ser usada em qualquer tipo
+
+---
+
+## 🧰 Tecnologias utilizadas
+
+### Front-end
+- React
+- TypeScript
+- Vite
+- Bootstrap
+- Axios
+
+### Back-end
+- .NET 10
+- ASP.NET Core Web API
+- Dapper
+- SQLite
+
+---
+
+## 🧹 Limpeza (opcional)
+
+Para resetar o banco de dados, pare a API e remova:
+
+```powershell
+rm WebAPIGastos/WebAPIGastos/controle_gastos.db
+```
+
+Depois, execute a API novamente para recriar o banco.
