@@ -4,7 +4,7 @@ Aplicação composta por uma **Web API em .NET 10** (backend) e um **frontend Re
 
 ---
 
-## 🚀 Iniciando (do zero)
+## Iniciando (do zero)
 
 ### 1) Clonar o repositório
 
@@ -22,7 +22,7 @@ cd WebAPIGastos/WebAPIGastos
 dotnet run --launch-profile https
 ```
 
-> 🔎 A API ficará disponível em `https://localhost:7214` (ou porta similar).
+> A API ficará disponível em `https://localhost:7214` (ou porta similar).
 
 ### 3) Rodar o frontend (React + Vite)
 
@@ -32,18 +32,18 @@ npm i
 npm run dev
 ```
 
-> 🔎 O frontend normalmente fica em `http://localhost:5173` e faz chamadas para a API.
+> O frontend normalmente fica em `http://localhost:5173` e faz chamadas para a API.
 
 ---
 
-## 🧭 Estrutura do repositório
+## Estrutura do repositório
 
 - `front/` – frontend React + TypeScript
 - `WebAPIGastos/` – backend ASP.NET Core Web API (SQLite)
 
 ---
 
-## 🪓 Regras de negócio (backend)
+## Regras de negócio (backend)
 
 Ao criar uma transação, a API valida:
 
@@ -58,7 +58,7 @@ Ao criar uma transação, a API valida:
 
 ---
 
-## 🧰 Tecnologias utilizadas
+## Tecnologias utilizadas
 
 ### Front-end
 - React
@@ -75,7 +75,7 @@ Ao criar uma transação, a API valida:
 
 ---
 
-## 🧹 Limpeza (opcional)
+## Limpeza (opcional)
 
 Para resetar o banco de dados, pare a API e remova:
 
